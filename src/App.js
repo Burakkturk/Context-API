@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import PersonDetail from "./pages/PersonDetail";
 import Login from "./pages/Login";
 import {LoginContext} from "./context/LoginContext"
+import PrivateRouter from "./pages/PrivateRouter"
 import {  useState } from "react";
 
 function App() {
@@ -23,8 +24,10 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="login" element={<Login />} />
 
+        <Route path="people" element={<PrivateRouter />} >
         <Route path="people" element={<People />} />
         <Route path="people/:id" element={<PersonDetail />} />
+        </Route >
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
