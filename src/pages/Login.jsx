@@ -13,8 +13,8 @@ const {user,setUser} =useContext(LoginContext)
 const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/")
-    setUser({email: "", password: ""})
+    navigate(-1)
+    // setUser({email: "", password: ""})
   };
 
   return (
